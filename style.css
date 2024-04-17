@@ -1,0 +1,123 @@
+/*
+Theme Name: Rankdone Blog
+Theme URI: https://blog.rankdone.com
+Author: Rankdone
+Author URI: https://rankdone.com
+Description: Bem-vindo ao blog da Rankdone, sua fonte definitiva para tudo relacionado a recrutamento, seleção e inovação em RH. Nosso tema WordPress é meticulosamente projetado para fornecer uma plataforma dinâmica onde você pode explorar as últimas notícias, dicas e informações essenciais sobre o mundo do recrutamento e tecnologia. Em um mercado de trabalho em constante evolução, entender as tendências e ferramentas de recrutamento é fundamental. Aqui, você encontrará artigos informativos e perspicazes sobre inteligência artificial para RH, tecnologia disruptiva e estratégias de recrutamento eficazes.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: recrutamento, seleção, RH, blog, notícias, dicas, tecnologia, inteligência artificial, custom-menu, sticky-menu, featured-image, footer-widgets
+Tested up: 8.1
+Requires at least: 6.1
+*/
+
+.has-primary-background-color,
+.has-primary-color {
+    background-color: var(--purple-500);
+}
+
+.has-secondary-background-color,
+.has-secondary-color {
+    background-color: var(--black);
+}
+
+.has-tertiary-background-color,
+.has-tertiary-color {
+    background-color: var(--white);
+}
+
+.has-purple-50-background-color,
+.has-purple-50-color {
+    background-color: var(--purple-50);
+}
+
+.has-purple-100-background-color,
+.has-purple-100-color {
+    background-color: var(--purple-100);
+}
+
+.has-purple-200-background-color,
+.has-purple-200-color {
+    background-color: var(--purple-200);
+}
+
+.has-purple-300-background-color,
+.has-purple-300-color {
+    background-color: var(--purple-300);
+}
+
+.has-purple-400-background-color,
+.has-purple-400-color {
+    background-color: var(--purple-400);
+}
+
+.has-purple-500-background-color,
+.has-purple-500-color {
+    background-color: var(--purple-500);
+}
+
+.has-purple-600-background-color,
+.has-purple-600-color {
+    background-color: var(--purple-600);
+}
+
+.has-purple-700-background-color,
+.has-purple-700-color {
+    background-color: var(--purple-700);
+}
+
+.has-purple-800-background-color,
+.has-purple-800-color {
+    background-color: var(--purple-800);
+}
+
+.has-purple-900-background-color,
+.has-purple-900-color {
+    background-color: var(--purple-900);
+}
+
+.has-gray-100-background-color,
+.has-gray-100-color {
+    background-color: var(--gray-100);
+}
+
+.has-gray-200-background-color,
+.has-gray-200-color {
+    background-color: var(--gray-200);
+}
+
+.has-gray-300-background-color,
+.has-gray-300-color {
+    background-color: var(--gray-300);
+}
+
+.has-gray-400-background-color,
+.has-gray-400-color {
+    background-color: var(--gray-400);
+}
+
+.has-gray-500-background-color,
+.has-gray-500-color {
+    background-color: var(--gray-500);
+}
+
+.has-gray-600-background-color,
+.has-gray-600-color {
+    background-color: var(--gray-600);
+}
+
+.has-gray-700-background-color,
+.has-gray-700-color {
+    background-color: var(--gray-700);
+}
+
+.has-gray-800-background-color,
+.has-gray-800-color {
+    background-color: var(--gray-800);
+}
+
+.has-gray-900-background-color,
+.has-gray-900-color {
+    background-color: var(--gray-900);
+}
