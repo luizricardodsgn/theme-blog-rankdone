@@ -6,6 +6,12 @@ function rankdone_load_scripts() {
     wp_enqueue_style( 'rankdone-style', get_template_directory_uri() . '/css/main.css', array(), '1.0', 'all' );
 }
 
+function rankdone_load_js() {
+    wp_register_script( 'main-script', get_template_directory_uri() . '/js/all.js', array(), '1.0', true );
+
+    wp_enqueue_script( 'main-script' );
+}
+
 
 // Adicionar e registrar menus menus
 function registrar_menu() {
@@ -270,6 +276,7 @@ add_theme_support('menus');
 
 // Adicionar Ações
 add_action('wp_enqueue_scripts', 'rankdone_load_scripts');
+add_action( 'wp_enqueue_scripts', 'rankdone_load_js' );
 add_action( 'init', 'registrar_menu' );
 add_action('widgets_init', 'rankdone_sidebars');
 add_action( 'after_setup_theme', 'rankdone_custom_image_size' );
