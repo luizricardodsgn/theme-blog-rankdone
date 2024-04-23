@@ -32,10 +32,10 @@
 
                 <div class="infos">
                     <div class="title">
-                        <h1><?php echo get_author_name() ?></h1>
+                        <h1><?php echo get_the_author_meta('display_name') ?></h1>
                         <?php
                         
-                        $author_id = get_the_author_ID();
+                        $author_id = get_the_author_meta('ID');
 
                         $post_count = count_user_posts( $author_id );
 
@@ -46,7 +46,7 @@
 
                         <div class="tags">
                             <?php
-                            $author_id = get_the_author_ID();
+                            $author_id = get_the_author_meta('ID');
 
                             $posts = get_posts( array(
                                 'author' => $author_id,
@@ -72,7 +72,7 @@
                             ?>
                         </div>
                     </div>
-                    <p><?php echo get_the_author_description() ?></p>
+                    <p><?php echo get_the_author_meta('description') ?></p>
                 </div>
             </div>
         </div>
