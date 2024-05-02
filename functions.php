@@ -3,13 +3,21 @@
 require get_template_directory() . '/inc/customizer.php';
 
 function rankdone_load_scripts() {
+    // Estilo principal
     wp_enqueue_style( 'rankdone-style', get_template_directory_uri() . '/css/main.css', array(), '1.0', 'all' );
+
+    // Estilo do plugin
+    wp_enqueue_style( 'rankdone-plugin-style', get_template_directory_uri() . '/css/plugins.css', array(), '1.0', 'all' );
 }
 
 function rankdone_load_js() {
+    // Script principal
     wp_register_script( 'main-script', get_template_directory_uri() . '/js/all.js', array(), '1.0', true );
-
     wp_enqueue_script( 'main-script' );
+
+    // Script do plugin
+    wp_register_script( 'plugin-script', get_template_directory_uri() . '/js/plugins.js', array(), '1.0', true );
+    wp_enqueue_script( 'plugin-script' );
 }
 
 
