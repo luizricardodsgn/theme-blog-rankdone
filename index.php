@@ -13,6 +13,7 @@ get_header(); ?>
                 <?php
                     $config = array(
                         'posts_per_page' => '1',
+                        'post_status' => 'publish',
                         'post_type' => 'post',
                         'order' => 'DESC',
                     );
@@ -60,6 +61,7 @@ get_header(); ?>
                     $args = array(
                         'meta_key' => 'post_views_count',
                         'posts_per_page' => 3,
+                        'post_status' => 'publish',
                         'orderby' => 'meta_value_num',
                         'order' => 'DESC',
                     );
@@ -74,7 +76,8 @@ get_header(); ?>
                                 $image_id = attachment_url_to_postid($image_url);
                                 $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
                             ?>
-                                <img src="<?php the_field('imagem_quadrada_do_post_xs') ?>" alt="<?php echo esc_attr($alt_text); ?>">
+                                <!-- <img src="<?php the_field('imagem_quadrada_do_post_xs') ?>" alt="<?php echo esc_attr($alt_text); ?>"> -->
+                                <?php the_post_thumbnail('thumb'); ?>
                             </div>
                             <div class="info">
                             <?php 
