@@ -4,6 +4,9 @@
     <meta charset="<?php bloginfo( 'charset' ) ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="<?php echo get_the_post_thumbnail_url(); ?>" />
+    <meta property="og:title" content="<?php bloginfo( 'name' ); ?> <?php wp_title( '-' ) ?>" />
+    <meta property="og:url" content="<?php bloginfo( 'url' ) ?>" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title><?php bloginfo( 'name' ); ?> <?php wp_title( '-' ); ?></title>
     <?php wp_head(); ?>
