@@ -123,6 +123,15 @@ function rankdone_custom_image_size() {
     add_image_size( 'thumb', 300, 300, true );
 }
 
+// Fallback de links
+function fallback_menu() {
+    echo '<ul>';
+    echo '<li><a class="link" href="#">Default Link 1</a></li>';
+    echo '<li><a class="link" href="#">Default Link 2</a></li>';
+    echo '<li><a class="link" href="#">Default Link 3</a></li>';
+    echo '</ul>';
+}
+
 // Remove action
 
 remove_action('wp_head', 'rsd_link');
