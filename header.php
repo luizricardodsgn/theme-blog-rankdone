@@ -15,7 +15,9 @@
 
     <header>
         <div class="container">
-            <?php the_custom_logo( ); ?>
+            <a href="/" class="logo" title="Ir para página inicial">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/logo-black.svg" alt="Logo da Rankdone">
+            </a>
 
             <nav>
                 <?php
