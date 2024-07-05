@@ -72,7 +72,9 @@
                             ?>
                         </div>
                     </div>
+                    <?php if (get_the_author_meta('description')): ?>
                     <p><?php echo get_the_author_meta('description') ?></p>
+                <?php endif; ?>
                 </div>
             </div>
         </div>
