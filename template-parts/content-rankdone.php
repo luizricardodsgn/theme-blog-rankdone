@@ -1,28 +1,15 @@
-<?php
-
-$title_section_rankdone = get_theme_mod('set_title_section', 'Insira o texto' );
-$title_subtitle_rankdone = get_theme_mod('set_title_secondary_section', 'Insira o texto');
-$text_rankdone = get_theme_mod('set_paragraph', 'Insira o texto');
-$text_button_rankdone = get_theme_mod('set_text_button', 'Texto do botão');
-$link_button_rankdone = get_theme_mod('set_link', '#');
-$image_section_rankdone_id = get_theme_mod('set_image_rankdone');
-$image_section_rankdone = wp_get_attachment_image_url( get_theme_mod('set_image_rankdone', ), 'full' );
-$image_section_rankdone_alt = get_post_meta($image_section_rankdone_id, '_wp_attachment_image_alt', true);
-
-?>
-
 <section class="s-know">
         <div class="container">
             <div class="left-area">
-                <h2><?php echo $title_section_rankdone ?></h2>
-                <h4><?php echo $title_subtitle_rankdone ?></h4>
-                <p><?php echo nl2br( $text_rankdone ); ?></p>
-                <a href="<?php echo $link_button_rankdone ?>" class="btn-primary md"><?php echo $text_button_rankdone ?></a>
+                <h2>A mais completa plataforma de testes online para processos seletivos.</h2>
+                <h4>Uso intenso de IA em toda a plataforma.</h4>
+                <p>Selecione com agilidade e assertividade os candidatos do processo de recrutamento e seleção usando a RIA ( I.A. da Rankdone) e os testes de hard e soft skills.</p>
+                <a href="https://www2.rankdone.com/en_US/sign-up/recruiter" target="_blank" class="btn-primary md">Expertimente grátis agora</a>
             </div>
             <div class="right-area">
                 <div class="image">
-                    <img src="<?php echo  $image_section_rankdone ?>" alt="<?php echo $image_section_rankdone_alt ?>">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img-woman.webp" alt="Imagem de uma mulher idosa segurando um tablet com duas outras mulheres de fundo.">
                 </div>
             </div>
         </div>
-</section>
+    </section>
