@@ -1,13 +1,14 @@
 <div class="all">
     <?php
-            $config = array(
-                'offset' => 1,
-                'posts_per_page' => '9',
-                'post_type' => 'post',
-                'order' => 'DESC',
-            );
+        $config = array(
+            'offset' => 1,
+            'posts_per_page' => '9',
+            'post_type' => 'post',
+            'order' => 'DESC',
+            'status' => 'publish'
+        );
 
-            $query_posts = new WP_Query( $config )
+        $query_posts = new WP_Query( $config )
         ?>
         <?php if(have_posts()) : while ($query_posts -> have_posts()) : $query_posts -> the_post(); ?>
         <a class="card-post-default" title="Acessar post"  href="<?php the_permalink(); ?>">
@@ -26,7 +27,7 @@
                 <h6><?php the_title(); ?></h6>
                 <ul>
                     <li>
-                    <span class="date"><?php echo get_the_date( 'd, M' ) ?></span>
+                    <span class="date"><?php echo get_the_date( 'd, M Y' ) ?></span>
                     </li>
                     <li>
                         <span><?php echo get_reading_time(); ?></span>
