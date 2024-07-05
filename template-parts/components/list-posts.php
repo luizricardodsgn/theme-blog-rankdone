@@ -1,11 +1,12 @@
 <div class="all">
     <?php
+        $sticky_posts = get_option('sticky_posts');
         $config = array(
-            'offset' => 1,
             'posts_per_page' => '9',
             'post_type' => 'post',
             'order' => 'DESC',
-            'status' => 'publish'
+            'status' => 'publish',
+            'post__not_in' => $sticky_posts
         );
 
         $query_posts = new WP_Query( $config )

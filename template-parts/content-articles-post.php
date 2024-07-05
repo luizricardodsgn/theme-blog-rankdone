@@ -16,13 +16,16 @@ $title = $args['title'];
         $orderby = isset($_GET['orderby']) ? $_GET['orderby'] : 'date';
         $order = isset($_GET['order']) ? $_GET['order'] : 'desc';
         $category = get_queried_object();
+        $sticky_posts = get_option('sticky_posts');
         $config = array(
             'post_status' => 'publish',
             'posts_per_page' => '9',
             'orderby' => $orderby,
             'post_type' => 'post',
             'paged' => $paged,
+            'post__not_in' => $sticky_posts,
             'order' => $order,
+            
             'cat' => $category->term_id
         );
 
