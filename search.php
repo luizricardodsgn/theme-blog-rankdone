@@ -64,7 +64,12 @@ $total_posts = $wp_query->found_posts;
                     <?php endwhile; ?>
                 </div>
                 <div class="pagination">
-                    <?php echo the_posts_pagination(  ) ?> 
+                <?php the_posts_pagination( array( 
+                        'mid_size' => 2,
+                        'prev_text' => __( '&laquo', 'textdomain' ),
+                        'next_text' => __( '&raquo', 'textdomain' ),
+                        )); 
+                    ?>
                 </div>
                 <?php wp_reset_postdata(); ?>
 
