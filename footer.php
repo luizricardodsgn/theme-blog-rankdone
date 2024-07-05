@@ -40,37 +40,61 @@
 
             <div class="main">
                 <nav class="left">
-                    <div class="item-nav">
-                        <?php
-                        if(is_active_sidebar( 'link-1' )){
-                            dynamic_sidebar( 'link-1' );
-                        }
-                        ?>
-                    </div>
+                <div class="item-nav">
+                    <?php
+                    if (is_active_sidebar('link-1')) {
+                        dynamic_sidebar('link-1');
+                    } else {
+                        echo '<h6>Link 1</h6>';
+                        echo '<ul>';
+                        echo '<li><a href="#">Default Link 1</a></li>';
+                        echo '<li><a href="#">Default Link 2</a></li>';
+                        echo '</ul>';
+                    }
+                    ?>
+                </div>
 
-                    <div class="item-nav">
-                        <?php
-                        if(is_active_sidebar( 'link-2' )){
-                            dynamic_sidebar( 'link-2' );
-                        }
-                        ?>
-                    </div>
+                <div class="item-nav">
+                    <?php
+                    if (is_active_sidebar('link-2')) {
+                        dynamic_sidebar('link-2');
+                    } else {
+                        echo '<h6>Link 2</h6>';
+                        echo '<ul>';
+                        echo '<li><a href="#">Default Link 1</a></li>';
+                        echo '<li><a href="#">Default Link 2</a></li>';
+                        echo '</ul>';
+                    }
+                    ?>
+                </div>
 
-                    <div class="item-nav">
-                        <?php
-                        if(is_active_sidebar( 'link-3' )){
-                            dynamic_sidebar( 'link-3' );
-                        }
-                        ?>
-                    </div>
+                <div class="item-nav">
+                    <?php
+                    if (is_active_sidebar('link-3')) {
+                        dynamic_sidebar('link-3');
+                    } else {
+                        echo '<h6>Link 3</h6>';
+                        echo '<ul>';
+                        echo '<li><a href="#">Default Link 1</a></li>';
+                        echo '<li><a href="#">Default Link 2</a></li>';
+                        echo '</ul>';
+                    }
+                    ?>
+                </div>
 
-                    <div class="item-nav">
-                        <?php
-                        if(is_active_sidebar( 'link-4' )){
-                            dynamic_sidebar( 'link-4' );
-                        }
-                        ?>
-                    </div>
+                <div class="item-nav">
+                    <?php
+                    if (is_active_sidebar('link-4')) {
+                        dynamic_sidebar('link-4');
+                    } else {
+                        echo '<h6>Link 4</h6>';
+                        echo '<ul>';
+                        echo '<li><a href="#">Default Link 1</a></li>';
+                        echo '<li><a href="#">Default Link 2</a></li>';
+                        echo '</ul>';
+                    }
+                    ?>
+                </div>
                 </nav>
 
                 <a href="https://api.whatsapp.com/send?phone=5511964290501&text=rankdone" class="btn-contact" target="_blank">
