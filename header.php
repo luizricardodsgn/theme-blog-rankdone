@@ -15,7 +15,7 @@
 
     <header>
         <div class="container">
-            <a href="/" class="logo" title="Ir para página inicial">
+            <a href="<?php echo get_home_url(); ?>" class="logo" title="Ir para página inicial">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/logo-black.svg" alt="Logo da Rankdone">
             </a>
 
@@ -24,7 +24,8 @@
                     $args = array(
                         'menu' => 'menu-principal',
                         'theme_location' => 'menu-principal',
-                        'container' => false
+                        'container' => false,
+                        'fallback_cb' => 'fallback_menu'
                     );
                     wp_nav_menu( $args );
                 ?>
