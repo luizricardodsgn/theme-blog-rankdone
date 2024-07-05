@@ -11,12 +11,24 @@ get_header(); ?>
                     <h2>Em destaque</h2>
                 </div>
                 <?php
-                    $config = array(
-                        'posts_per_page' => '1',
-                        'post_status' => 'publish',
-                        'post_type' => 'post',
-                        'order' => 'DESC',
-                    );
+                    $sticky_post_id = get_option( 'sticky_posts' );
+					if ( $sticky_post_id ) {
+						$config = array(
+							'posts_per_page' => 1,
+							'post__in' => $sticky_post_id,
+							'ignore_sticky_posts' => 1,
+							'post_status' => 'publish',
+							'post_type' => 'post',
+							'order' => 'DESC',
+						);
+					} else {
+						$config = array(
+							'posts_per_page' => 1,
+							'post_status' => 'publish',
+							'post_type' => 'post',
+							'order' => 'DESC',
+						);
+					}
 
                     $query_posts = new WP_Query( $config )
                 ?>
@@ -39,7 +51,7 @@ get_header(); ?>
                             <ul>
                                 <li>
                                     <img src="<?php echo get_template_directory_uri() ?>/assets/icon-calendar.svg" alt="Ícone de um calendário">
-                                    <span class="date"><?php echo get_the_date( 'd, M' ) ?></span>
+                                    <span class="date"><?php echo get_the_date( 'd, M Y' ) ?></span>
                                 </li>
                 
                                 <li>
@@ -58,12 +70,14 @@ get_header(); ?>
                 <h4>Mais populares</h4>
                 <div class="all-populars">
                     <?php
+                    $sticky_posts = get_option('sticky_posts');
                     $args = array(
                         'meta_key' => 'post_views_count',
                         'posts_per_page' => 3,
                         'post_status' => 'publish',
                         'orderby' => 'meta_value_num',
                         'order' => 'DESC',
+                        'post__not_in' => $sticky_posts
                     );
                     $top_views_post = new WP_Query($args);
                     ?>
@@ -71,12 +85,6 @@ get_header(); ?>
                     <div class="item-post">
                         <a class="card-post-xs" href="<?php the_permalink(); ?>">
                             <div class="image">
-                            <?php 
-                                $image_url = get_field('imagem_quadrada_do_post_xs');
-                                $image_id = attachment_url_to_postid($image_url);
-                                $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-                            ?>
-                                <!-- <img src="<?php the_field('imagem_quadrada_do_post_xs') ?>" alt="<?php echo esc_attr($alt_text); ?>"> -->
                                 <?php the_post_thumbnail('thumb'); ?>
                             </div>
                             <div class="info">
@@ -91,7 +99,7 @@ get_header(); ?>
                                 <h6 class="txt-white"><?php the_title(); ?></h6>
                                 <ul>
                                     <li>
-                                        <span class="date"><?php echo get_the_date( 'd, M' ) ?></span>
+                                        <span class="date"><?php echo get_the_date( 'd, M Y' ) ?></span>
                                     </li>
                                     <li>
                                         <span><?php echo get_reading_time(); ?></span>
