@@ -50,7 +50,7 @@ $title = $args['title'];
                 <h6><?php the_title(); ?></h6>
                 <ul>
                     <li>
-                        <span class="date"><?php echo get_the_date( 'd, M' ) ?></span>
+                        <span class="date"><?php echo get_the_date( 'd, M Y' ) ?></span>
                     </li>
                     <li>
                         <span><?php echo get_reading_time(); ?></span>
