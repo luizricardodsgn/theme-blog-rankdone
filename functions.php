@@ -1,23 +1,21 @@
 <?php 
 
-require get_template_directory() . '/inc/customizer.php';
-
 function rankdone_load_scripts() {
-    // Estilo principal
-    wp_enqueue_style( 'rankdone-style', get_template_directory_uri() . '/css/main.css', array(), '1.0', 'all' );
-
     // Estilo do plugin
     wp_enqueue_style( 'rankdone-plugin-style', get_template_directory_uri() . '/css/plugins.css', array(), '1.0', 'all' );
+
+    // Estilo principal
+    wp_enqueue_style( 'rankdone-style', get_template_directory_uri() . '/css/main.css', array(), '1.0', 'all' );
 }
 
 function rankdone_load_js() {
-    // Script principal
-    wp_register_script( 'main-script', get_template_directory_uri() . '/js/all.js', array(), '1.0', true );
-    wp_enqueue_script( 'main-script' );
-
     // Script do plugin
     wp_register_script( 'plugin-script', get_template_directory_uri() . '/js/plugins.js', array(), '1.0', true );
     wp_enqueue_script( 'plugin-script' );
+
+    // Script principal
+    wp_register_script( 'main-script', get_template_directory_uri() . '/js/all.js', array(), '1.0', true );
+    wp_enqueue_script( 'main-script' );
 }
 
 
@@ -119,29 +117,10 @@ function rankdone_sidebars() {
     );
 }
 
-// Permitir upload de arquivos SVG
-function custom_upload_svg( $file_types ) {
-    $file_types['svg'] = 'image/svg+xml';
-    return $file_types;
-}
-
 // Tamanhos customizados de imagem
 function rankdone_custom_image_size() {
     add_image_size( 'medium', 592, 320, true );
     add_image_size( 'thumb', 300, 300, true );
-}
-
-// Verifica se o plugin ACF está ativo
-if ( !class_exists('ACF') ) {
-    add_action( 'admin_notices', 'acf_missing_notice' );
-    
-    function acf_missing_notice() {
-        ?>
-        <div class="notice notice-error">
-            <p><?php _e( 'O tema Rankdone Blog requer que o plugin ACF (Advanced Custom Fields) esteja instalado e ativo para funcionar corretamente. Por favor, instale e ative o plugin antes de continuar.', 'rankdone-blog' ); ?></p>
-        </div>
-        <?php
-    }
 }
 
 // Remove action
@@ -288,10 +267,5 @@ add_action( 'wp_enqueue_scripts', 'rankdone_load_js' );
 add_action( 'init', 'registrar_menu' );
 add_action('widgets_init', 'rankdone_sidebars');
 add_action( 'after_setup_theme', 'rankdone_custom_image_size' );
-
-// Filtros
-add_filter( 'upload_mimes', 'custom_upload_svg' );
-
-
 
 ?>
