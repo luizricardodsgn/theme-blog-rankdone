@@ -1,5 +1,16 @@
 ### Patch Notes
 
+## [Versão 1.1.1] - 2024-07-22
+
+## Adicionado
+
+- **Formulário do Mautic**: Inserido o shortcode da newsletter da Rankdone.
+- **Estilização do formulário do Mautic**: Estilizado o formulário do mautic para seguir com o layout desenvolvido.
+
+### Removido
+
+- **Código CSS anterior**: Removido linhas de CSS que estilizavam o formulário estático.
+
 ## [Versão 1.1.0] - 2024-07-05
 
 ### Adicionado
