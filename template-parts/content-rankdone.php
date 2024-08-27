@@ -4,7 +4,7 @@
                 <h2>A mais completa plataforma de testes online para processos seletivos.</h2>
                 <h4>Uso intenso de IA em toda a plataforma.</h4>
                 <p>Selecione com agilidade e assertividade os candidatos do processo de recrutamento e seleção usando a RIA ( I.A. da Rankdone) e os testes de hard e soft skills.</p>
-                <a href="https://www2.rankdone.com/en_US/sign-up/recruiter" target="_blank" class="btn-primary md">Expertimente grátis agora</a>
+                <a href="https://www2.rankdone.com/pt_BR/sign-up/recruiter" target="_blank" class="btn-primary md">Expertimente grátis agora</a>
             </div>
             <div class="right-area">
                 <div class="image">
