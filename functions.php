@@ -120,7 +120,7 @@ function rankdone_sidebars() {
 // Tamanhos customizados de imagem
 function rankdone_custom_image_size() {
     add_image_size( 'medium', 592, 320, true );
-    add_image_size( 'thumb', 300, 300, true );
+    add_image_size( 'thumb', 300, 300, array( 'center', 'right' ) );
 }
 
 // Fallback de links
