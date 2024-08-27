@@ -1,7 +1,12 @@
 <?php
 get_header(); ?>
 
-
+<section class="s-prev-rankdone">
+    <div class="container">
+        <h1>Muito além de um sistema de recrutamento e seleção (ATS)</h1>
+        <h4>A mais completa plataforma de testes online para processos seletivos com uso intensivo de IA.</h4>
+    </div>
+</section>
 
     <section class="s-hero-post">
         <div class="container">
@@ -114,10 +119,6 @@ get_header(); ?>
         </div>
     </section>
 
-    <?php get_template_part('template-parts/content-newsletter') ?>
-
-    <?php get_template_part('template-parts/components/separator') ?>
-
     <section class="s-all-posts">
         <div class="container">
             <div class="top-info">
@@ -129,6 +130,23 @@ get_header(); ?>
         </div>
     </section>
 
-    <?php get_template_part('template-parts/content', 'rankdone') ?>
+    <?php echo get_template_part( 'template-parts/content', 'rankdone' ) ?>
+
+    <div class="modal js-modal">
+        <div class="overlay">
+            <div class="box">
+                <button class="js-btn-close" title="Fechar">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/icon-close.svg" alt="Ícone de fechar">
+                </button>
+                <div class="content">
+                    <div class="form">
+                        <h3>Inscreva-se para receber uma dose semanal de conteúdos grátis no seu e-mail!</h3>
+                        <?php echo do_shortcode('[mautic type="form" id="5" lazy="true"]') ?>
+                    </div>
+                </div>
+                <img class="illustration-modal" src="<?php echo get_template_directory_uri(); ?>/assets/illustra-modal.svg" alt="Illustração do modal">
+            </div>
+        </div>
+    </div>
 
 <?php get_footer(); ?>
