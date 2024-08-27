@@ -1,8 +1,11 @@
+<?php get_template_part('template-parts/components/separator') ?>
+<?php get_template_part('template-parts/content-newsletter') ?>
+
 <footer>
         <div class="container">
             <div class="top">
                 <a href="<?php bloginfo( 'url' ) ?>" title="Voltar para página inicial" class="logo-footer">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/logo-white.svg" alt="Logo da Rankdone">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/logo-white-blog.svg" alt="Logo da Rankdone">
                 </a>
 
                 <div class="socials">
