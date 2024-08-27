@@ -16,7 +16,7 @@
     <header>
         <div class="container">
             <a href="<?php echo get_home_url(); ?>" class="logo" title="Ir para página inicial">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/logo-black.svg" alt="Logo da Rankdone">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/logo-blog.svg" alt="Logo da Rankdone">
             </a>
 
             <nav>
