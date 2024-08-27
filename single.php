@@ -88,6 +88,5 @@ setPostViews(get_the_ID());
 
 
 <?php get_template_part('template-parts/content', 'post-related') ?>
-<?php get_template_part('template-parts/content', 'newsletter') ?>
 
 <?php get_footer() ?>
